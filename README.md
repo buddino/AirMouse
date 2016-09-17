@@ -1,3 +1,5 @@
+<img scr="http://www.poloprato.unifi.it/fileadmin/templates/pin2013/logo_unifi.png" />
+
 # AirMouse
 A touchless input device built on the top of the physical mouse idiom using the Leap Motion Controller.
 
