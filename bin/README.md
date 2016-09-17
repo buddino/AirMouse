@@ -32,17 +32,20 @@ click-debounce = 1000;		#milliseconds
 ```
 
 ###Usage
-(./*AirMouse config*)
+1. Ensure the Leap Motion Controller is connected and the `leapd` is running correctly (Leap IR LEDs on)
+2. Launch the program: `./AirMouse config`
+3. Use p/o to decrease/increase the base speed factor (higher speed factor means more speed but lower accuracy)
+4. Put your hand above the device, virtually grab the mouse and move, the pointer should move following your hand
 
-
+To stop the program press `q`
 StaticGestureTrainer
 --------
-1. Launch the StaticGestureTrainer: './StaticGestureTrainer'
+1. Launch the StaticGestureTrainer: `./StaticGestureTrainer`
 2. Insert training set name
 3. Press 0/1/2 to choose the pose you want to record (NULL/GRAB/PINCH)
-4. Press 'r' to start recording and 'p' to pause 
+4. Press `r` to start recording and `p` to pause 
 5. Repeat 3-4 for the 3 hand poses
-6. Press 't' to save the training set
+6. Press `t` to save the training set
 
 The program will save a file with the filename set at the beginning. This file contains all the recorder samples and can be used to generate a trained pipeline with the *MergeTrainingSet*.
 
