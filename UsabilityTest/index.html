@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quantitative test</title>
+    <script src="js/jquery-3.0.0.js"></script>
+    <style>
+        .square {
+            width: 10em;
+            height: 10em;
+            float: left;
+            margin: 4em;
+        }
+
+        #A {
+            background-color: red;
+        }
+
+        #B {
+            background-color: green;
+        }
+
+        #C {
+            background-color: blue;
+        }
+
+        #D {
+            background-color: yellow;
+        }
+
+        #E {
+            background-color: black;
+        }
+	#instruction {
+	font-size: 3em;
+		text-align:center;
+		text-shadow: 1px 1px 2px #000000;
+	}
+#results {
+    text-align: center;
+    font-size: 2em;
+}
+#status {
+	font-size:1.5em;
+	float: left;
+}
+
+    </style>
+    <script>
+	$( function(){
+	$("#status").text( i +"/"+ actions.length );
+	setTimeout(tic,300);
+	});
+        var i = 0;
+        var timer = new Timer();
+	var globalTimer = new Timer();
+        var pauseTime = 100;
+
+        /**
+         * Timer
+         * var t = new Timer();
+         * t.tick() to start the timer
+         * t.tock() return the elapsed time in ms from tick call
+         */
+        function Timer() {
+        }
+        Timer.prototype.startTime = 0
+        Timer.prototype.tick = function () {
+            this.startTime = Date.now();
+            //console.log("tick: "+Date.now());
+        };
+        Timer.prototype.tock = function () {
+            //console.log("tock: "+Date.now());
+            var elapsed = 0;
+            if (this.startTime != 0) {
+                elapsed = Date.now() - this.startTime;
+            }
+            this.startTime = 0;
+            return elapsed;
+        };
+
+        var colors = ["red","green","blue","yellow","black"]
+        var buttonNames = ["left", "right"];
+        var actions = [
+            {square: 0, button: 0},
+            {square: 1, button: 0},
+            {square: 4, button: 0},
+            {square: 4, button: 0},
+            {square: 1, button: 0},
+            {square: 3, button: 0},
+	    {square: 3, button: 0},
+            {square: 2, button: 0},
+	    {square: 1, button: 0},
+	    {square: 0, button: 0},
+	    {square: 2, button: 0},
+            {square: 1, button: 0},
+            {square: 1, button: 0},
+            {square: 1, button: 0},
+            {square: 0, button: 0},
+            {square: 4, button: 0}
+        ];
+
+        var answers1 = [];
+        var answers2 = [];
+	var errors = 0;
+	var action;
+        function tic() {
+            if (i == actions.length) {
+                $(document).off("click");
+                console.log("Cleared");
+                showResults();
+                return 0;
+            }
+            $(document).on("click", ".square", function () {
+                click(this)
+            });
+            timer.tick();
+            action = actions[i++];
+            $("#instruction").css("color",colors[action.square]);
+            //$("#instruction").text("Press " + colors[action.square] + " with mouse " + buttonNames[action.button] + " button");
+			$("#instruction").text("Click the " + colors[action.square] + " square");
+        }
+
+        function click(el) {
+	
+            if (i > 1) {
+		if ($(el).data("square") == action.square ){
+		        if (actions[i - 1].square == actions[i - 2].square) {
+		            answers1.push({
+		                answer: $(el).data("square"),
+		                square: actions[i-1].square,
+		                elapsed: timer.tock()});
+		        }
+		        else {
+		            answers2.push({name: $(el).attr("name"), elapsed: timer.tock()});
+		        }
+		}
+		else { 	
+			errors++; 
+			console.log("ERROR");
+		}
+            }
+else {globalTimer.tick();}
+            $(document).off("click");
+            $("#instruction").css("color","black");
+            $("#instruction").text("waiting...");
+			var str = 
+			$("#status").text( i +"/"+ (actions.length) );
+            setTimeout(tic, pauseTime);
+        }
+        function save() {
+            var link = document.createElement('a');
+            if (typeof link.download === 'string') {
+                document.body.appendChild(link); 
+                link.download = Date.now()+".txt";
+                link.href = 'data:text/json;charset=utf-8,' + (JSON.stringify(results));
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+	var results = {};
+        function showResults(){
+
+			results.total = globalTimer.tock();
+			$("#instruction").hide();
+			$("#status").hide();
+
+            var sum = 0.0;
+            for (i in answers1){
+                sum += answers1[i].elapsed;
+            }
+	    results.avgclick = (sum/answers1.length).toFixed(0) ;
+            sum = 0.0;
+            for (i in answers2){
+                sum += answers2[i].elapsed;
+            }
+            results.avgmvclick = (sum/answers2.length).toFixed(0) ;
+	    results.errors = errors;
+            $("#squares").fadeOut(100, function() {
+                $("#results").html("Click speed: " + results.avgclick+ " ms<br>" + "Move and click speed: " + results.avgmvclick+ " ms<br> Total time: " + results.total + " ms<br> Errors: " + results.errors + "/" + (actions.length-1));		
+            });
+	$(document).on("click","#results",function(){save(); $("#results").hide();});
+
+        }
+
+
+    </script>
+</head>
+<body>
+<div id="status"></div>
+<h2 id="instruction">Nuova istruzione</h2>
+<div id="squares">
+    <div id="A" class="square" data-square=0></div>
+    <div id="B" class="square" data-square=1></div>
+    <div id="C" class="square" data-square=2></div>
+    <div id="D" class="square" data-square=3></div>
+    <div id="E" class="square" data-square=4></div>
+</div>
+
+<div id = "results">
+</div>
+
+</body>
+</html>
