@@ -10,7 +10,8 @@ AirMouse
 --------
 AirMouse is the main program which takes as argument a configuration file.
 ###Configuration
-'''pose-pipeline = "pipelines/TrainedPipeline4";
+```
+pose-pipeline = "pipelines/TrainedPipeline4";
 leftclick-pipeline = "pipelines/LeftClickPipeline";
 rightclick-pipeline = "pipelines/RightClickPipeline";
 base-speedfactor = 8.0;
@@ -18,7 +19,8 @@ shift-threshold = 0.05;
 circle-progress = 1.2;		#radians
 sampling-period = 10;		#millisecond
 scroll-debounce = 200; 		#milliseconds
-click-debounce = 1000;		#milliseconds'''
+click-debounce = 1000;		#milliseconds
+```
 
 
 StaticGestureTrainer
