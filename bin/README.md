@@ -24,7 +24,7 @@ shift-threshold = 0.05;
 #Angle (in radians) to be completed before starting the scroll
 circle-progress = 1.2;		#radians
 #Sampling period form Leap Motion
-sampling-period = 10;		#millisecond
+sampling-period = 10;		#milliseconds
 #Debounce time fro scrolling
 scroll-debounce = 200; 		#milliseconds
 #Debounce time for mouse click
