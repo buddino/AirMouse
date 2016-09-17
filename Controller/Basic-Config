@@ -1,0 +1,6 @@
+# AirMouse Configuration file
+
+pose-pipeline = "TrainedPipeline";
+leftclick-pipeline = "LeftClickPipeline";
+rightclick-pipeline = "RightClickPipeline";
+base-speedfactor = 10.0;
