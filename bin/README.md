@@ -37,6 +37,14 @@ click-debounce = 1000;		#milliseconds
 
 StaticGestureTrainer
 --------
+1. Launch the StaticGestureTrainer: './StaticGestureTrainer'
+2. Insert training set name
+3. Press 0/1/2 to choose the pose you want to record (NULL/GRAB/PINCH)
+4. Press 'r' to start recording and 'p' to pause 
+5. Repeat 3-4 for the 3 hand poses
+6. Press 't' to save the training set
+
+The program will save a file with the filename set at the beginning. This file contains all the recorder samples and can be used to generate a trained pipeline with the *MergeTrainingSet*.
 
 ClickGestureTrainer
 --------
