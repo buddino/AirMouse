@@ -2,8 +2,7 @@
 
 # AirMouse
 A touchless input device built on the top of the physical mouse idiom using the Leap Motion Controller.
-
-One Paragraph of project description goes here
+AirMouse is the result of my work for the Human Computer Interaction course (University of Florence - Prof. A. D. Bagdanov)
 
 ## Getting Started
 
@@ -11,7 +10,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 
-What things you need to install the software and how to install them
+* A
+* B
+* C
+* 
 
 ```
 Give examples
