@@ -31,13 +31,13 @@ scroll-debounce = 200; 		#milliseconds
 click-debounce = 1000;		#milliseconds
 ```
 
-###Usage
+##Usage
 1. Ensure the Leap Motion Controller is connected and the `leapd` is running correctly (Leap IR LEDs on)
 2. Launch the program: `./AirMouse config`
 3. Use p/o to decrease/increase the base speed factor (higher speed factor means more speed but lower accuracy)
 4. Put your hand above the device, virtually grab the mouse and move, the pointer should move following your hand
+To stop the program press `q`.
 
-To stop the program press `q`
 StaticGestureTrainer
 --------
 1. Launch the StaticGestureTrainer: `./StaticGestureTrainer`
@@ -45,18 +45,29 @@ StaticGestureTrainer
 3. Press 0/1/2 to choose the pose you want to record (NULL/GRAB/PINCH)
 4. Press `r` to start recording and `p` to pause 
 5. Repeat 3-4 for the 3 hand poses
-6. Press `t` to save the training set
+6. Press `t` to train a test pipeline
+7. Press `j` to test your training set
+8. If the result is good press `s` to save the training set  
 
 The program will save a file with the filename set at the beginning. This file contains all the recorder samples and can be used to generate a trained pipeline with the *MergeTrainingSet*.
 
 ClickGestureTrainer
 --------
+It takes 2 arguments as input: `./ClickGestureTrainer n_samples period`
+* n_samples: the number of samples to record for each click
+* period: length of the sampling period
+
+For example to record 40 samples, one every 5ms, launch with arguments: `./ClickGestureTrainer 40 5`
+1. To record a new sample put you hand above the sensor and prepair to click
+2. Press `n`, the program will start recording, execute the click gesture
+3. Repeat 2 for at least 50 times (the more, the better)
+4. Press `t` to start training the pipeline
 
 MergeTrainingSet
 --------
 Merge different dataset for static hand poses and outputs a trained pipeline. Useful if you want to train the static poses recognizer with samples from different people. If you have only one dataset file do the same with only that file in order to produce a trained pipeline.
 
-###Usage:
+##Usage:
 1. Put all training sets into a folder (for example "test")
 2. Launch the program passing the folder name as argument (./*MergeTrainingSet test*)
 3. It will merge all the training sets into one that will be partitioned into train (80%) e test (20%), train with the given samples and output  the GRT pipeline as "TrainedPipeline". This file can be passed to *AirMouse*.
