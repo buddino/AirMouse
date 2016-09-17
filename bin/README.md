@@ -19,5 +19,5 @@ MergeTrainingSet
 --------
 1. Put all training sets into a folder (for example "test")
 2. Launch the program passing the folder name as argument >*MergeTrainingSet test*
-3. It will merge all the training sets into one that will be partitioned into train (80) e test (20), train with the given samples and output  the GRT pipeline as "TrainedPipeline". This file can be passed to *AirMouse*.
+3. It will merge all the training sets into one that will be partitioned into train (80%) e test (20%), train with the given samples and output  the GRT pipeline as "TrainedPipeline". This file can be passed to *AirMouse*.
 
