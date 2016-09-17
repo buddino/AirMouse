@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 
-* A
+* [GRT Library](http://www.nickgillian.com/wiki/pmwiki.php/GRT/GestureRecognitionToolkit)
 * B
 * C
 * 
