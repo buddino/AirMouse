@@ -10,10 +10,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 
+* A [Leap Motion Controller](https://www.leapmotion.com/)
 * [GRT Library](http://www.nickgillian.com/wiki/pmwiki.php/GRT/GestureRecognitionToolkit)
-* B
-* C
-* 
+* [Leap Motion SDK](https://developer.leapmotion.com/)
+* [X11 lib]
+* [Ncurses] 
 
 ```
 Give examples
