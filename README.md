@@ -8,6 +8,8 @@ AirMouse is the result of my work for the Human Computer Interaction course (Uni
 The main idea is to simulate the mouse behavior without touching any physical object but using the same idiom learned using a computer. 
 AirMouse was evaluated with a usability test to assess user opinions and by a set of timed tests to collect an objective measure of the performance and an estimation of the learning curve.*
 
+Link to the [Final Report](AirMouse/UsabilityTest/AirMouse - Project Report - Giovanni Cuffaro.pdf)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
