@@ -11,16 +11,28 @@ AirMouse
 AirMouse is the main program which takes as argument a configuration file.
 ###Configuration
 ```
+#The hand pose (static) pipeline
 pose-pipeline = "pipelines/TrainedPipeline4";
+#The left click gesture pipeline
 leftclick-pipeline = "pipelines/LeftClickPipeline";
+#The right click gesture pipeline
 rightclick-pipeline = "pipelines/RightClickPipeline";
+#The default speed factor (its max value) can be modified at runtime
 base-speedfactor = 8.0;
+#Threshold for the deadzone
 shift-threshold = 0.05;
+#Angle (in radians) to be completed before starting the scroll
 circle-progress = 1.2;		#radians
+#Sampling period form Leap Motion
 sampling-period = 10;		#millisecond
+#Debounce time fro scrolling
 scroll-debounce = 200; 		#milliseconds
+#Debounce time for mouse click
 click-debounce = 1000;		#milliseconds
 ```
+
+###Usage
+(./*AirMouse config*)
 
 
 StaticGestureTrainer
