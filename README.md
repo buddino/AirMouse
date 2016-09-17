@@ -22,6 +22,14 @@ These instructions will get you a copy of the project up and running on your loc
 * X11 lib
 * ncurses
 
+## Project structure
+* **bin**: contains binaries and [instruction](bin/README.md)
+* **UsabilityTest**: contains the little website user for the time test and the usability questionnaire
+* **ClickGestureTrainer**: sources of the training set recorder for the click gesture (left and right)
+* **Controller**: sources of the main application (AirMouse)
+* **MergeTrainingSet** sources of the training sets merger
+* **StaticGesturesTrainer**: sources of the training set recorder for the hand poses
+
 ## Authors
 
 **Giovanni Cuffaro**
