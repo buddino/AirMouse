@@ -9,6 +9,7 @@ The main idea is to simulate the mouse behavior without touching any physical ob
 AirMouse was evaluated with a usability test to assess user opinions and by a set of timed tests to collect an objective measure of the performance and an estimation of the learning curve.*
 
 Link to the [Final Report](UsabilityTest/AirMouse - Project Report - Giovanni Cuffaro.pdf)
+Link to the [Demo Video](https://vimeo.com/183378886)
 
 ## Prerequisities
 
