@@ -79,7 +79,7 @@ For example to record 40 samples, one every 5ms, launch with arguments: `./Click
 Merge different dataset for static hand poses and outputs a trained pipeline. Useful if you want to train the static poses recognizer with samples from different people. If you have only one dataset file do the same with only that file in order to produce a trained pipeline.
 
 ###Usage:
-1. Put all training sets into a folder (for example "test")
+1. Put all the training set files (for static hand-poses) into a folder (for example "test")
 2. Launch the program passing the folder name as argument (./*MergeTrainingSet test*)
 3. It will merge all the training sets into one that will be partitioned into train (80%) e test (20%), train with the given samples and output  the GRT pipeline as "TrainedPipeline". This file can be passed to *AirMouse*.
 
