@@ -10,11 +10,7 @@ AirMouse was evaluated with a usability test to assess user opinions and by a se
 
 Link to the [Final Report](UsabilityTest/AirMouse - Project Report - Giovanni Cuffaro.pdf)
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisities
+## Prerequisities
 
 * A [Leap Motion Controller](https://www.leapmotion.com/) - all the project is based on this device
 * [GRT Library](https://github.com/nickgillian/grt) - Gesture Recognition Toolkit 
