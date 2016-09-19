@@ -16,11 +16,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisities
 
-* A [Leap Motion Controller](https://www.leapmotion.com/)
-* [GRT Library](https://github.com/nickgillian/grt)
-* [Leap Motion SDK](https://developer.leapmotion.com/)
-* X11 lib
-* ncurses
+* A [Leap Motion Controller](https://www.leapmotion.com/) - all the project is based on this device
+* [GRT Library](https://github.com/nickgillian/grt) - Gesture Recognition Toolkit 
+* [Leap Motion SDK](https://developer.leapmotion.com/) - Connect to the Leap device and access its data
+* X11 lib - To manage mouse events
+* ncurses - Simple text-based terminal interface
 
 ## Project structure
 * **bin**: contains binaries and [instruction](bin/README.md)
