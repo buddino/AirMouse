@@ -1,6 +1,4 @@
 #How to use binaries
-=======
- 
 * **AirMouse**: the main program, it uses a trained pipeline to recognize hand poses and gestures and control your pointer
 * **StaticGestureTrainer**: records the dataset for the hand poses and outputs a dataset file
 * **ClickGestureTrainer**: records the dataset for the click gesture and outputs a dataset file
@@ -14,7 +12,6 @@
 5. Use *AirMouse* (passing the configuration file) to take touchless control of the pointer.
 
 ##AirMouse
---------
 AirMouse is the main program which takes as argument a configuration file.
 ###Configuration
 ```
@@ -46,7 +43,6 @@ click-debounce = 1000;		#milliseconds
 To stop the program press `q`.
 
 ##StaticGestureTrainer
---------
 The program records the dataset for the hand poses and outputs a dataset file.
 It allows to test your training set before saving.
 
@@ -63,7 +59,6 @@ It allows to test your training set before saving.
 The program will save a file with the filename set at the beginning. This file contains all the recorder samples and can be used to generate a trained pipeline with the *MergeTrainingSet*.
 
 ##ClickGestureTrainer
---------
 The program records the dataset for the click gesture and outputs a trained pipeline to be used in the AirMouse program.
 It can be used to train both left and right click gesture.
 
@@ -81,7 +76,6 @@ For example to record 40 samples, one every 5ms, launch with arguments: `./Click
 4. Press `t` to start training the pipeline
 
 ##MergeTrainingSet
---------
 Merge different dataset for static hand poses and outputs a trained pipeline. Useful if you want to train the static poses recognizer with samples from different people. If you have only one dataset file do the same with only that file in order to produce a trained pipeline.
 
 ###Usage:
