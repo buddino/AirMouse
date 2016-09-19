@@ -22,7 +22,7 @@ Link to the [Demo Video](https://vimeo.com/183378886)
 
 ## Project structure
 * **bin**: contains binaries and [instruction](bin/README.md)
-* **UsabilityTest**: contains the little website user for the time test and the usability questionnaire
+* **UsabilityTest**: contains the little website used for the timed test and the usability questionnaire
 * **ClickGestureTrainer**: sources of the training set recorder for the click gesture (left and right)
 * **Controller**: sources of the main application (AirMouse)
 * **MergeTrainingSet** sources of the training sets merger
