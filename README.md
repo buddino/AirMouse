@@ -31,6 +31,7 @@ Link to the [Demo Video](https://vimeo.com/183378886)
 ## Authors
 
 Student: **Giovanni Cuffaro**
+
 Supervisor: **Andrew David Bagdanov**
 ## License
 
