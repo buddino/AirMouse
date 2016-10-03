@@ -30,8 +30,8 @@ Link to the [Demo Video](https://vimeo.com/183378886)
 
 ## Authors
 
-**Giovanni Cuffaro**
-
+Student: **Giovanni Cuffaro**
+Supervisor: **Andrew David Bagdanov**
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
